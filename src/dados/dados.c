@@ -81,3 +81,29 @@ void desalocarVetorPais(pai *vetor) {
         free(vetor);
     }
 }
+
+int buscarBrinquedo(brinquedo *vetor, int quantidade, int id_buscado) {
+    int i;
+
+    for (i = 0; i < quantidade; i++) {
+        if (vetor[i].id_brinquedo == id_buscado) {
+            return i;
+        }
+    }
+
+    return -1;
+}
+
+void removerBrinquedo(brinquedo *vetor, int *quantidade, int id_remover) {
+    int i;
+    int indice = buscarbrinquedo(vetor, *quantidade, id_remover);
+
+    if (indice == -1) {
+        return 0;
+    }
+
+    for (i = indice; i < (*quantidade) - 1; i++) {
+        vetor[i] = vetor[i+1];
+    }
+    (*quantidade)--;
+}
