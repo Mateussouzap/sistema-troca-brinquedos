@@ -30,7 +30,7 @@ pai *alocarVetorPais(int capacidade_inicial);
 void cadastrarPai(pai **vetor, int *quantidade, int *capacidade, pai novo);
 void desalocarVetorPais(pai *vetor);
 
-int buscarbrinquedo(brinquedo *vetor, int quantidade, int id_buscado);
+int buscarBrinquedo(brinquedo *vetor, int quantidade, int id_buscado);
 void removerBrinquedo(brinquedo *vetor, int *quantidade, int id_remover);
 
 #endif

@@ -96,10 +96,10 @@ int buscarBrinquedo(brinquedo *vetor, int quantidade, int id_buscado) {
 
 void removerBrinquedo(brinquedo *vetor, int *quantidade, int id_remover) {
     int i;
-    int indice = buscarbrinquedo(vetor, *quantidade, id_remover);
+    int indice = buscarBrinquedo(vetor, *quantidade, id_remover);
 
     if (indice == -1) {
-        return 0;
+        return;
     }
 
     for (i = indice; i < (*quantidade) - 1; i++) {
